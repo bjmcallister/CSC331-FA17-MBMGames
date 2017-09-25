@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nowproject.csc331_fa17_mbmgames">
+    package="com.example.spencermassey.test">
 
     <application
         android:allowBackup="true"

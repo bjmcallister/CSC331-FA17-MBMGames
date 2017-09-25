@@ -1,4 +1,4 @@
-package nowproject.csc331_fa17_mbmgames;
+package com.example.spencermassey.test;
 
 import org.junit.Test;
 
