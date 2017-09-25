@@ -1,4 +1,4 @@
-package edu.southalabama.csc331.csc331_fa17_mbmgames;
+package com.example.spencermassey.test;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

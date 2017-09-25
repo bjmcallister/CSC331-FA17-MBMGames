@@ -1,4 +1,4 @@
-package edu.southalabama.csc331.csc331_fa17_mbmgames;
+package com.example.spencermassey.test;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("edu.southalabama.csc331.csc331_fa17_mbmgames", appContext.getPackageName());
+        assertEquals("com.example.spencermassey.test", appContext.getPackageName());
     }
 }
