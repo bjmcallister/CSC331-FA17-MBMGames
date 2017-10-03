@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SecondPage"
+            android:label="@string/title_activity_second_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WordJumble" />
+        <activity
+            android:name=".WordLadder"
+            android:label="@string/title_activity_word_ladder"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
