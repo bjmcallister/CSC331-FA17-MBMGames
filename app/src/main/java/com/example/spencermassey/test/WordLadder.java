@@ -13,14 +13,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
+import java.lang.String;
 public class WordLadder extends AppCompatActivity {
+    public String hint = "given hint";
+    public String hint1 = "given hint 1";
+    public String hint2 = "given hint 2";
+    public String hint3 = "given hint 3";
+    public String hint4 = "given hint 4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
     }
+
+
 
         public void GoHome(View view)
     {
@@ -31,7 +38,7 @@ public class WordLadder extends AppCompatActivity {
     {
         TextView tv= (TextView) findViewById(R.id.hint);
         //alter text of textview widget
-        tv.setText("Given");
+        tv.setText(hint);
 
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
@@ -40,7 +47,7 @@ public class WordLadder extends AppCompatActivity {
     {
         TextView tv= (TextView) findViewById(R.id.hint1);
         //alter text of textview widget
-        tv.setText("Given hint 2");
+        tv.setText(hint1);
 
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
@@ -50,7 +57,7 @@ public class WordLadder extends AppCompatActivity {
     {
         TextView tv= (TextView) findViewById(R.id.hint2);
         //alter text of textview widget
-        tv.setText("Given hint 3");
+        tv.setText(hint2);
 
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
@@ -60,7 +67,7 @@ public class WordLadder extends AppCompatActivity {
     {
         TextView tv= (TextView) findViewById(R.id.hint3);
         //alter text of textview widget
-        tv.setText("Given hint 4");
+        tv.setText(hint3);
 
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
@@ -69,7 +76,7 @@ public class WordLadder extends AppCompatActivity {
     {
         TextView tv= (TextView) findViewById(R.id.hint4);
         //alter text of textview widget
-        tv.setText("Given hint 5");
+        tv.setText(hint4);
 
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
