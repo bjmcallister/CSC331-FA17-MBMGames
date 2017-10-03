@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
         public void GoToWordJumble(View view)
     {
         Intent nextPage = new Intent(MainActivity.this, WordJumble.class);
