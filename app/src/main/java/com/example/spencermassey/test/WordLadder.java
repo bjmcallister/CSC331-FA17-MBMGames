@@ -20,6 +20,8 @@ public class WordLadder extends AppCompatActivity {
     public String hint2 = "given hint 2";
     public String hint3 = "given hint 3";
     public String hint4 = "given hint 4";
+    public String Correct = "Correct";
+    public String Incorrect = "Incorrect";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +37,11 @@ public class WordLadder extends AppCompatActivity {
                 EditText userInput = (EditText) findViewById(R.id.Answer);
                 if (!hasFocus) {
                     if(userInput.getText().toString().equals("apple")){
-                        userInput.setText("Correct");
+                        userInput.setText(Correct);
                         userInput.setTextColor(Color.GREEN);
                     }
                     else {
-                        userInput.setText("Incorrect");
+                        userInput.setText(Incorrect);
                         userInput.setTextColor(Color.RED);
                     }
                 }
