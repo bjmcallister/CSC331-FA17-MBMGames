@@ -36,11 +36,13 @@ public class WordLadder extends AppCompatActivity {
     */
                 EditText userInput = (EditText) findViewById(R.id.Answer);
                 if (!hasFocus) {
-                    if(userInput.getText().toString().equals("apple")){
+                    if((userInput.getText().toString().equals("apple"))){
                         userInput.setText(Correct);
-                        userInput.setTextColor(Color.GREEN);
-                    }
-                    else {
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else if(!(userInput.getText().toString().equals("apple") || !(userInput.getText().toString().equals("Correct")))) {
+                            userInput.setText(Correct);
+                            userInput.setTextColor(Color.GREEN);
                         userInput.setText(Incorrect);
                         userInput.setTextColor(Color.RED);
                     }
