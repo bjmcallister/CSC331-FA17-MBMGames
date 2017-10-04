@@ -1,24 +1,15 @@
 package com.example.spencermassey.test;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.String;
-import android.view.View.OnKeyListener;
-import android.view.View;
 import android.view.KeyEvent;
+
 
 import static com.example.spencermassey.test.R.id.Answer;
 import static com.example.spencermassey.test.R.id.editText;
@@ -34,7 +25,23 @@ public class WordLadder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
+        ((EditText)findViewById(R.id.youredittext)).setOnEditorActionListener(
+                new EditText.OnEditorActionListener() {
+                    @Override
+                    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                        if (actionId == EditorInfo.IME_ACTION_SEARCH ||
+                                actionId == EditorInfo.IME_ACTION_DONE ||
+                                event.getAction() == KeyEvent.ACTION_DOWN &&
+                                        event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                            if (!event.isShiftPressed()) {
+                                // the user is done typing.
 
+                                return true; // consume.
+                            }
+                        }
+                        return false; // pass on to other listeners.
+                    }
+                });
     }
     public void GoHome(View view)
     {
@@ -59,6 +66,7 @@ public class WordLadder extends AppCompatActivity {
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
     }
+
 
     public void display2(View v)
     {

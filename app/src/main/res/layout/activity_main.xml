@@ -28,7 +28,7 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/returnbtn"
         android:layout_width="210dp"
         android:layout_height="75dp"
         android:text="@string/button_word_ladder"
