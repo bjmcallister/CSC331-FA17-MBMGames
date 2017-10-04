@@ -10,7 +10,7 @@
     <string name="end">ladr</string>
     <string name="start">word</string>
     <string name="hint">Hint</string>
-    <string name="answer">Answer</string>
+    <string name="answer">_____</string>
     <string name="button_word_ladder">World Ladder</string>
     <string name="title_activity_second_page">Word Jumble</string>
     <string name="title_activity_word_ladder">Word Ladder</string>

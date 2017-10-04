@@ -40,9 +40,7 @@ public class WordLadder extends AppCompatActivity {
                         userInput.setText(Correct);
                         userInput.setTextColor(Color.GREEN);}
 
-                    else if(!(userInput.getText().toString().equals("apple") || !(userInput.getText().toString().equals("Correct")))) {
-                            userInput.setText(Correct);
-                            userInput.setTextColor(Color.GREEN);
+                    else if(!((userInput.getText().toString().equals("apple")) || ((userInput.getText().toString().equals("Correct"))))){
                         userInput.setText(Incorrect);
                         userInput.setTextColor(Color.RED);
                     }
