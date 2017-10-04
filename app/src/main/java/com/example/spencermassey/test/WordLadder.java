@@ -36,12 +36,101 @@ public class WordLadder extends AppCompatActivity {
     */
                 EditText userInput = (EditText) findViewById(R.id.Answer);
                 if (!hasFocus) {
-                    if((userInput.getText().toString().equals("apple"))){
-                        userInput.setText(Correct);
+                    if((userInput.getText().toString().equals("ward"))){
                         userInput.setTextColor(Color.GREEN);}
 
-                    else if(!((userInput.getText().toString().equals("apple")) || ((userInput.getText().toString().equals("Correct"))))){
-                        userInput.setText(Incorrect);
+                    else {
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
+
+        ((EditText)findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer1);
+                if (!hasFocus) {
+                    if((userInput.getText().toString().equals("lard"))){
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else {
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
+        ((EditText)findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer1);
+                if (!hasFocus) {
+                    if((userInput.getText().toString().equals("lard"))){
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else {
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
+        ((EditText)findViewById(R.id.Answer2)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer2);
+                if (!hasFocus) {
+                    if((userInput.getText().toString().equals("laid"))){
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else {
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
+        ((EditText)findViewById(R.id.Answer3)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer3);
+                if (!hasFocus) {
+                    if((userInput.getText().toString().equals("lair"))){
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else {
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
+        ((EditText)findViewById(R.id.Answer4)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer4);
+                if (!hasFocus) {
+                    if((userInput.getText().toString().equals("ladr"))){
+                        userInput.setTextColor(Color.GREEN);}
+
+                    else {
                         userInput.setTextColor(Color.RED);
                     }
                 }
