@@ -1,6 +1,7 @@
 package com.example.spencermassey.test;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,8 +13,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.String;
+import android.view.View.OnKeyListener;
+import android.view.View;
+import android.view.KeyEvent;
+
+import static com.example.spencermassey.test.R.id.Answer;
+import static com.example.spencermassey.test.R.id.editText;
+
 public class WordLadder extends AppCompatActivity {
     public String hint = "given hint";
     public String hint1 = "given hint 1";
@@ -26,10 +35,7 @@ public class WordLadder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
     }
-
-
-
-        public void GoHome(View view)
+    public void GoHome(View view)
     {
         Intent nextPage = new Intent(WordLadder.this, MainActivity.class);
         startActivity(nextPage);
@@ -81,6 +87,15 @@ public class WordLadder extends AppCompatActivity {
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
     }
+    public void onClick(View view){
+            EditText userInput = (EditText) findViewById(R.id.Answer);
+            if(userInput.getText().toString().equals("apple")){
+                userInput.setTextColor(Color.GREEN);
+            }
+            else {
+                userInput.setTextColor(Color.RED);
+            }
+        }
 
 }
 
