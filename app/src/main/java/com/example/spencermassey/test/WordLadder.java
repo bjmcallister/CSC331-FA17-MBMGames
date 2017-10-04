@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.String;
-import android.view.KeyEvent;
+
 
 
 import static com.example.spencermassey.test.R.id.Answer;
@@ -25,23 +25,26 @@ public class WordLadder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
-        ((EditText)findViewById(R.id.youredittext)).setOnEditorActionListener(
-                new EditText.OnEditorActionListener() {
-                    @Override
-                    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                        if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                                actionId == EditorInfo.IME_ACTION_DONE ||
-                                event.getAction() == KeyEvent.ACTION_DOWN &&
-                                        event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
-                            if (!event.isShiftPressed()) {
-                                // the user is done typing.
+        ((EditText)findViewById(R.id.Answer)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-                                return true; // consume.
-                            }
-                        }
-                        return false; // pass on to other listeners.
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+    /* When focus is lost check that the text field
+    * has valid values.
+    */
+                EditText userInput = (EditText) findViewById(R.id.Answer);
+                if (!hasFocus) {
+                    if(userInput.getText().toString().equals("apple")){
+                        userInput.setText("Correct");
+                        userInput.setTextColor(Color.GREEN);
                     }
-                });
+                    else {
+                        userInput.setText("Incorrect");
+                        userInput.setTextColor(Color.RED);
+                    }
+                }
+            }
+        });
     }
     public void GoHome(View view)
     {
