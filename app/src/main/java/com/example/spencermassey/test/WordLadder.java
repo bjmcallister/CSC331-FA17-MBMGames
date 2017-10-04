@@ -34,6 +34,7 @@ public class WordLadder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
+
     }
     public void GoHome(View view)
     {
@@ -87,12 +88,14 @@ public class WordLadder extends AppCompatActivity {
         //assign the textview forecolor
         tv.setTextColor(Color.GREEN);
     }
-    public void onClick(View view){
+    public void onClick(View v){
             EditText userInput = (EditText) findViewById(R.id.Answer);
             if(userInput.getText().toString().equals("apple")){
+                userInput.setText("Correct");
                 userInput.setTextColor(Color.GREEN);
             }
             else {
+                userInput.setText("Incorrect");
                 userInput.setTextColor(Color.RED);
             }
         }
