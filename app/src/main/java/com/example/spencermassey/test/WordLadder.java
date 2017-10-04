@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.graphics.Color;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.String;
@@ -15,11 +16,11 @@ import static com.example.spencermassey.test.R.id.Answer;
 import static com.example.spencermassey.test.R.id.editText;
 
 public class WordLadder extends AppCompatActivity {
-    public String hint = "given hint";
-    public String hint1 = "given hint 1";
-    public String hint2 = "given hint 2";
-    public String hint3 = "given hint 3";
-    public String hint4 = "given hint 4";
+    public String hint = "A person who has authority over others";
+    public String hint1 = "The rendered fat of hogs";
+    public String hint2 = "Any part of the earth's surface not covered by water";
+    public String hint3 = "Part of a highway large enough for one vehicle";
+    public String hint4 = "A stick or short staff used to assist one in walking";
     public String Correct = "Correct";
     public String Incorrect = "Incorrect";
 
@@ -27,115 +28,94 @@ public class WordLadder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
-        ((EditText)findViewById(R.id.Answer)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            ((EditText) findViewById(R.id.Answer)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
     /* When focus is lost check that the text field
     * has valid values.
     */
-                EditText userInput = (EditText) findViewById(R.id.Answer);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("ward"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
+                    EditText userInput = (EditText) findViewById(R.id.Answer);
+                    if (!hasFocus) {
+                        if ((userInput.getText().toString().equals("lord"))) {
+                            userInput.setTextColor(Color.GREEN);
+                        } else {
+                            //userInput.setTextColor(Color.RED);
+                        }
                     }
                 }
-            }
-        });
+            });
 
-        ((EditText)findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+            ((EditText) findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
     /* When focus is lost check that the text field
     * has valid values.
     */
-                EditText userInput = (EditText) findViewById(R.id.Answer1);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("lard"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
+                    EditText userInput = (EditText) findViewById(R.id.Answer1);
+                    if (!hasFocus) {
+                        if ((userInput.getText().toString().equals("lard"))) {
+                            userInput.setTextColor(Color.GREEN);
+                        } else {
+                            //userInput.setTextColor(Color.RED);
+                        }
                     }
                 }
-            }
-        });
-        ((EditText)findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            });
+            ((EditText) findViewById(R.id.Answer2)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
     /* When focus is lost check that the text field
     * has valid values.
     */
-                EditText userInput = (EditText) findViewById(R.id.Answer1);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("lard"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
+                    EditText userInput = (EditText) findViewById(R.id.Answer2);
+                    if (!hasFocus) {
+                        if ((userInput.getText().toString().equals("land"))) {
+                            userInput.setTextColor(Color.GREEN);
+                        } else {
+                            //userInput.setTextColor(Color.RED);
+                        }
                     }
                 }
-            }
-        });
-        ((EditText)findViewById(R.id.Answer2)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            });
+            ((EditText) findViewById(R.id.Answer3)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
     /* When focus is lost check that the text field
     * has valid values.
     */
-                EditText userInput = (EditText) findViewById(R.id.Answer2);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("laid"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
+                    EditText userInput = (EditText) findViewById(R.id.Answer3);
+                    if (!hasFocus) {
+                        if ((userInput.getText().toString().equals("lane"))) {
+                            userInput.setTextColor(Color.GREEN);
+                        } else {
+                            //userInput.setTextColor(Color.RED);
+                        }
                     }
                 }
-            }
-        });
-        ((EditText)findViewById(R.id.Answer3)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            });
+            ((EditText) findViewById(R.id.Answer4)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
     /* When focus is lost check that the text field
     * has valid values.
     */
-                EditText userInput = (EditText) findViewById(R.id.Answer3);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("lair"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
+                    EditText userInput = (EditText) findViewById(R.id.Answer4);
+                    if (!hasFocus) {
+                        if ((userInput.getText().toString().equals("cane"))) {
+                            userInput.setTextColor(Color.GREEN);
+                        } else {
+                            //userInput.setTextColor(Color.RED);
+                        }
                     }
                 }
-            }
-        });
-        ((EditText)findViewById(R.id.Answer4)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            });
 
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-    /* When focus is lost check that the text field
-    * has valid values.
-    */
-                EditText userInput = (EditText) findViewById(R.id.Answer4);
-                if (!hasFocus) {
-                    if((userInput.getText().toString().equals("ladr"))){
-                        userInput.setTextColor(Color.GREEN);}
-
-                    else {
-                        userInput.setTextColor(Color.RED);
-                    }
-                }
-            }
-        });
     }
     public void GoHome(View view)
     {
@@ -149,7 +129,7 @@ public class WordLadder extends AppCompatActivity {
         tv.setText(hint);
 
         //assign the textview forecolor
-        tv.setTextColor(Color.GREEN);
+        //tv.setTextColor(Color.GREEN);
     }
     public void display1(View v)
     {
@@ -158,7 +138,7 @@ public class WordLadder extends AppCompatActivity {
         tv.setText(hint1);
 
         //assign the textview forecolor
-        tv.setTextColor(Color.GREEN);
+        //tv.setTextColor(Color.GREEN);
     }
 
 
@@ -169,7 +149,7 @@ public class WordLadder extends AppCompatActivity {
         tv.setText(hint2);
 
         //assign the textview forecolor
-        tv.setTextColor(Color.GREEN);
+        //tv.setTextColor(Color.GREEN);
     }
 
     public void display3(View v)
@@ -179,7 +159,7 @@ public class WordLadder extends AppCompatActivity {
         tv.setText(hint3);
 
         //assign the textview forecolor
-        tv.setTextColor(Color.GREEN);
+        //tv.setTextColor(Color.GREEN);
     }
     public void display4(View v)
     {
@@ -188,7 +168,7 @@ public class WordLadder extends AppCompatActivity {
         tv.setText(hint4);
 
         //assign the textview forecolor
-        tv.setTextColor(Color.GREEN);
+        //tv.setTextColor(Color.GREEN);
     }
 }
 

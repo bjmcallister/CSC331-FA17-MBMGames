@@ -7,16 +7,13 @@
     <string name="Return">Return</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_word_jumble">Word Jumble</string>
-    <string name="end">ladr</string>
-    <string name="start">word</string>
-    <string name="hint">Hint</string>
+    <string name="end">Cone</string>
+    <string name="start">Word</string>
+    <string name="hint">"?"</string>
     <string name="answer">_____</string>
     <string name="button_word_ladder">World Ladder</string>
     <string name="title_activity_second_page">Word Jumble</string>
     <string name="title_activity_word_ladder">Word Ladder</string>
-    <string name="ward">ward</string>
-    <string name="lard">lard</string>
-    <string name="laid">laid</string>
-    <string name="lair">lair</string>
+
 </resources>
 
