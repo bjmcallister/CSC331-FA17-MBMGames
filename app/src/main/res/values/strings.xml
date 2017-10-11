@@ -14,6 +14,11 @@
     <string name="button_word_ladder">World Ladder</string>
     <string name="title_activity_second_page">Word Jumble</string>
     <string name="title_activity_word_ladder">Word Ladder</string>
+    <string name="check">Check</string>
+    <string name="congrats">Congrats</string>
+    <string name="cont">Congrats! Would you like to continue or exit?</string>
+    <string name="incorrect">One of your answers is incorrect</string>
+    <string name="blank">____</string>
 
 </resources>
 
