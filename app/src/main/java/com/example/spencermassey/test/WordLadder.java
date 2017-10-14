@@ -25,8 +25,7 @@ public class WordLadder extends AppCompatActivity {
     public String hint2 = "Any part of the earth's surface not covered by water";
     public String hint3 = "Part of a highway large enough for one vehicle";
     public String hint4 = "A stick or short staff used to assist one in walking";
-    public String Correct = "Correct";
-    public String Incorrect = "Incorrect";
+
     public int count = 0;
 
     @Override
@@ -34,36 +33,20 @@ public class WordLadder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
 
-        Button mShowDialog = (Button) findViewById(R.id.alert);
+        Button mShowDialog = (Button) findViewById(R.id.check);
         mShowDialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 if (count >= 5) {
                     AlertDialog.Builder mBuilder = new AlertDialog.Builder(WordLadder.this);
                     mBuilder.setIcon(android.R.drawable.sym_def_app_icon);
-                    mBuilder.setTitle(R.string.congrats);
-                    mBuilder.setMessage(R.string.cont);
-                    mBuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+                    mBuilder.setTitle(R.string.Con);
+                    mBuilder.setMessage(R.string.winner);
+
+                    mBuilder.setPositiveButton("Return", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            EditText Answer=(EditText) findViewById(R.id.Answer);
-                            Answer.setText(R.string.blank);
-                            EditText Answer1=(EditText) findViewById(R.id.Answer1);
-                            Answer1.setText(R.string.blank);
-                            EditText Answer2=(EditText) findViewById(R.id.Answer2);
-                            Answer2.setText(R.string.blank);
-                            EditText Answer3=(EditText) findViewById(R.id.Answer3);
-                            Answer3.setText(R.string.blank);
-                            EditText Answer4=(EditText) findViewById(R.id.Answer4);
-                            Answer4.setText(R.string.blank);
-                            Restart();
-                        }
-                    });
-                    mBuilder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            Intent swapper = new Intent(WordLadder.this, MainActivity.class);
-                            startActivity(swapper);
+                            dialogInterface.dismiss();
                         }
                     });
 
@@ -73,15 +56,10 @@ public class WordLadder extends AppCompatActivity {
                 if (count != 5) {
                     AlertDialog.Builder mBuilder = new AlertDialog.Builder(WordLadder.this);
                     mBuilder.setIcon(android.R.drawable.sym_def_app_icon);
-                    mBuilder.setTitle(R.string.incorrect);
-                    mBuilder.setMessage(R.string.cont);
-                    mBuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            Restart();
-                        }
-                    });
-                    mBuilder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                    mBuilder.setTitle(R.string.wrong);
+                    mBuilder.setMessage(R.string.incor);
+
+                    mBuilder.setNegativeButton("Return", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
@@ -105,7 +83,6 @@ public class WordLadder extends AppCompatActivity {
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("lord"))) {
                             userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
                             count++;
                         }
                     }
@@ -121,7 +98,6 @@ public class WordLadder extends AppCompatActivity {
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("lard"))) {
                             userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
                             count++;
                         }
                     }
@@ -138,7 +114,6 @@ public class WordLadder extends AppCompatActivity {
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("land"))) {
                             userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
                             count++;
                         }
                     }
@@ -155,7 +130,6 @@ public class WordLadder extends AppCompatActivity {
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("lane"))) {
                             userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
                             count++;
                         }
                     }
@@ -172,7 +146,6 @@ public class WordLadder extends AppCompatActivity {
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("cane"))) {
                             userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
                             count++;
                         }
                     }
@@ -182,6 +155,25 @@ public class WordLadder extends AppCompatActivity {
     }
     public void Restart(){
         this.recreate();
+    }
+
+    public void Reset(View v){
+        EditText Answer=(EditText) findViewById(R.id.Answer);
+        Answer.setText(R.string.blank);
+        EditText Answer1=(EditText) findViewById(R.id.Answer1);
+        Answer1.setText(R.string.blank);
+        EditText Answer2=(EditText) findViewById(R.id.Answer2);
+        Answer2.setText(R.string.blank);
+        EditText Answer3=(EditText) findViewById(R.id.Answer3);
+        Answer3.setText(R.string.blank);
+        EditText Answer4=(EditText) findViewById(R.id.Answer4);
+        Answer4.setText(R.string.blank);
+        Restart();
+    }
+
+    public void exit(View v) {
+        Intent swapper = new Intent(WordLadder.this, MainActivity.class);
+        startActivity(swapper);
     }
     public void display(View v)
     {

@@ -19,6 +19,12 @@
     <string name="cont">Congrats! Would you like to continue or exit?</string>
     <string name="incorrect">One of your answers is incorrect</string>
     <string name="blank">____</string>
+    <string name="exit">exit</string>
+    <string name="reset">Reset</string>
+    <string name="incor">I\'m sorry, but one of your answers is incorrect.</string>
+    <string name="Con">Congrats!</string>
+    <string name="winner">Congratulations! You have solved this Word Ladder!</string>
+    <string name="wrong">Incorrect!</string>
 
 </resources>
 
