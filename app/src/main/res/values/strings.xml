@@ -26,6 +26,11 @@
     <string name="winner">Congratulations! You have solved this Word Ladder!</string>
     <string name="wrong">Incorrect!</string>
     <string name="mbm_games">MBM Games</string>
+    <string name="hint4">A stick or short staff used to assist one in walking</string>
+    <string name="hint3">Part of a highway large enough for one vehicle</string>
+    <string name="hint2">Any part of the earth\'s surface not covered by water</string>
+    <string name="hint1">The rendered fat of hogs</string>
+    <string name="hints">A person who has authority over others</string>
 
 </resources>
 
