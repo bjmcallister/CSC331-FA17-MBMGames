@@ -25,6 +25,7 @@
     <string name="Con">Congrats!</string>
     <string name="winner">Congratulations! You have solved this Word Ladder!</string>
     <string name="wrong">Incorrect!</string>
+    <string name="mbm_games">MBM Games</string>
 
 </resources>
 

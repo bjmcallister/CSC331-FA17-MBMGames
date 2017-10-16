@@ -1,23 +1,22 @@
 package com.example.spencermassey.test;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.graphics.Color;
-import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.lang.String;
 
-
-
-import static com.example.spencermassey.test.R.id.Answer;
-import static com.example.spencermassey.test.R.id.editText;
 
 public class WordLadder extends AppCompatActivity {
     public String hint = "A person who has authority over others";
@@ -32,6 +31,12 @@ public class WordLadder extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
+
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
 
         Button mShowDialog = (Button) findViewById(R.id.check);
         mShowDialog.setOnClickListener(new View.OnClickListener(){
@@ -72,22 +77,107 @@ public class WordLadder extends AppCompatActivity {
             }
         });
 
+        final EditText userInput = (EditText) findViewById(R.id.Answer);
+        final EditText userInput1 = (EditText) findViewById(R.id.Answer1);
+        final EditText userInput2 = (EditText) findViewById(R.id.Answer2);
+        final EditText userInput3 = (EditText) findViewById(R.id.Answer3);
+        final EditText userInput4 = (EditText) findViewById(R.id.Answer4);
 
+        userInput.setSingleLine(true);
+        userInput.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
-
-            ((EditText) findViewById(R.id.Answer)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-                @Override
-                public void onFocusChange(View v, boolean hasFocus) {
-                    EditText userInput = (EditText) findViewById(R.id.Answer);
-                    if (!hasFocus) {
-                        if ((userInput.getText().toString().equals("lord"))) {
-                            userInput.setTextColor(Color.GREEN);
-                            count++;
-                        }
-                    }
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((userInput.getText().toString().equals("lord"))) {
+                    userInput.setTextColor(Color.GREEN);
+                    count++;
                 }
-            });
+                IBinder bob = getWindow().getDecorView().getRootView().getWindowToken();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(bob, 0);
+                return true;
+            }
+        });
+
+        userInput1.setSingleLine(true);
+        userInput1.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        userInput1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((userInput1.getText().toString().equals("lard"))) {
+                    userInput1.setTextColor(Color.GREEN);
+                    count++;
+                }
+                IBinder bob = getWindow().getDecorView().getRootView().getWindowToken();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(bob, 0);
+                return true;
+            }
+        });
+        userInput2.setSingleLine(true);
+        userInput2.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        userInput2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((userInput2.getText().toString().equals("land"))) {
+                    userInput2.setTextColor(Color.GREEN);
+                    count++;
+                }
+                IBinder bob = getWindow().getDecorView().getRootView().getWindowToken();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(bob, 0);
+                return true;
+            }
+        });
+        userInput3.setSingleLine(true);
+        userInput3.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        userInput3.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((userInput3.getText().toString().equals("lane"))) {
+                    userInput3.setTextColor(Color.GREEN);
+                    count++;
+                }
+                IBinder bob = getWindow().getDecorView().getRootView().getWindowToken();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(bob, 0);
+                return true;
+            }
+        });
+        userInput4.setSingleLine(true);
+        userInput4.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        userInput4.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((userInput4.getText().toString().equals("cane"))) {
+                    userInput4.setTextColor(Color.GREEN);
+                    count++;
+                }
+                IBinder bob = getWindow().getDecorView().getRootView().getWindowToken();
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(bob, 0);
+                return true;
+            }
+        });
+//        ((EditText) findViewById(R.id.Answer)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                EditText userInput = (EditText) findViewById(R.id.Answer);
+//                if (!hasFocus) {
+//                    if ((userInput.getText().toString().equals("lord"))) {
+//                        userInput.setTextColor(Color.GREEN);
+//                        count++;
+//                    }
+//                }
+//            }
+//        });
+
 
 
             ((EditText) findViewById(R.id.Answer1)).setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -107,9 +197,7 @@ public class WordLadder extends AppCompatActivity {
 
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
-    /* When focus is lost check that the text field
-    * has valid values.
-    */
+
                     EditText userInput = (EditText) findViewById(R.id.Answer2);
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("land"))) {
@@ -123,9 +211,7 @@ public class WordLadder extends AppCompatActivity {
 
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
-    /* When focus is lost check that the text field
-    * has valid values.
-    */
+
                     EditText userInput = (EditText) findViewById(R.id.Answer3);
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("lane"))) {
@@ -139,9 +225,6 @@ public class WordLadder extends AppCompatActivity {
 
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
-    /* When focus is lost check that the text field
-    * has valid values.
-    */
                     EditText userInput = (EditText) findViewById(R.id.Answer4);
                     if (!hasFocus) {
                         if ((userInput.getText().toString().equals("cane"))) {
