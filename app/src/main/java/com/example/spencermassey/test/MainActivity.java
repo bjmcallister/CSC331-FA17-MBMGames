@@ -14,11 +14,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-        public void GoToWordJumble(View view)
+    //Switches to Word Jumble
+    public void GoToWordJumble(View view)
     {
         Intent nextPage = new Intent(MainActivity.this, WordJumble.class);
         startActivity(nextPage);
     }
+    //Switches to Word Ladder
     public void GoToWordLadder(View view)
     {
         Intent nextPage = new Intent(MainActivity.this, WordLadder.class);

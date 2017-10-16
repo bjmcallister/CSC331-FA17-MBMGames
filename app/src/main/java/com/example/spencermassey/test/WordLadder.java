@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 public class WordLadder extends AppCompatActivity {
 
+    //initializes count
     public int count = 0;
 
     @Override
@@ -26,12 +27,14 @@ public class WordLadder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_ladder);
 
+        //This removes soft keyboard by default
         View view = this.getCurrentFocus();
         if (view != null) {
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
 
+        //Adds an alert message if all answers are correct or not.
         Button mShowDialog = (Button) findViewById(R.id.check);
         mShowDialog.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -71,12 +74,14 @@ public class WordLadder extends AppCompatActivity {
             }
         });
 
+        //settings up variables
         final EditText userInput = (EditText) findViewById(R.id.Answer);
         final EditText userInput1 = (EditText) findViewById(R.id.Answer1);
         final EditText userInput2 = (EditText) findViewById(R.id.Answer2);
         final EditText userInput3 = (EditText) findViewById(R.id.Answer3);
         final EditText userInput4 = (EditText) findViewById(R.id.Answer4);
 
+        //If sets an Action_Done command to turn the correct answer to green and add to count
         userInput.setSingleLine(true);
         userInput.setImeOptions(EditorInfo.IME_ACTION_DONE);
         userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -163,10 +168,13 @@ public class WordLadder extends AppCompatActivity {
             }
         });
     }
+
+    //Recreates the board
     public void Restart(){
         this.recreate();
     }
 
+    //Resets all answers
     public void Reset(View v){
         EditText Answer=(EditText) findViewById(R.id.Answer);
         Answer.setText(R.string.blank);
@@ -181,34 +189,38 @@ public class WordLadder extends AppCompatActivity {
         Restart();
     }
 
+    //switches to Main Menu
     public void exit(View v) {
         Intent swapper = new Intent(WordLadder.this, MainActivity.class);
         startActivity(swapper);
     }
+
+    //hint1
     public void display(View v)
     {
         TextView tv= (TextView) findViewById(R.id.hint);
         tv.setText(R.string.hints);
 
     }
+    //hint2
     public void display1(View v)
     {
         TextView tv= (TextView) findViewById(R.id.hint1);
         tv.setText(R.string.hint1);
     }
-
-
+    //hint3
     public void display2(View v)
     {
         TextView tv= (TextView) findViewById(R.id.hint2);
         tv.setText(R.string.hint2);
     }
-
+    //hint4
     public void display3(View v)
     {
         TextView tv= (TextView) findViewById(R.id.hint3);
         tv.setText(R.string.hint3);
     }
+    //hint5
     public void display4(View v)
     {
         TextView tv= (TextView) findViewById(R.id.hint4);
