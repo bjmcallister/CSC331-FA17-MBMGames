@@ -58,7 +58,7 @@ public class WordLadder extends AppCompatActivity {
                     AlertDialog alertDialog = mBuilder.create();
                     alertDialog.show();
                 }
-                if (count != 5) {
+                if (count < 5) {
                     AlertDialog.Builder mBuilder = new AlertDialog.Builder(WordLadder.this);
                     mBuilder.setIcon(android.R.drawable.sym_def_app_icon);
                     mBuilder.setTitle(R.string.wrong);
