@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Test</string>
-
     <string name="Jumble">Word Jumble</string>
     <string name="Ladder">Word Ladder</string>
     <string name="action_settings">Settings</string>
@@ -21,7 +20,7 @@
     <string name="blank">____</string>
     <string name="exit">exit</string>
     <string name="reset">Reset</string>
-    <string name="incor">I\'m sorry, but one of your answers is incorrect.</string>
+    <string name="incor">I\'m sorry, but at least one of your answers is incorrect.</string>
     <string name="Con">Congrats!</string>
     <string name="winner">Congratulations! You have solved this Word Ladder!</string>
     <string name="wrong">Incorrect!</string>
