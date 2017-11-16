@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ladder"
+    android:background="@drawable/ocean"
     tools:context="com.example.spencermassey.test.MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
@@ -321,7 +321,6 @@
         android:id="@+id/Answer6"
         android:layout_width="149dp"
         android:layout_height="48dp"
-        android:textColor="#0F0"
         android:background="@android:drawable/screen_background_dark_transparent"
         android:ems="10"
         android:gravity="center"
