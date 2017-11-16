@@ -30,6 +30,13 @@
     <string name="hint2">Any part of the earth\'s surface not covered by water</string>
     <string name="hint1">The rendered fat of hogs</string>
     <string name="hints">A person who has authority over others</string>
+    <string name="rodW">rodW</string>
+    <string name="Ldor">Ldor</string>
+    <string name="arLd">arLd</string>
+    <string name="nLad">nLad</string>
+    <string name="eLna">eLna</string>
+    <string name="eaCn">eaCn</string>
+    <string name="oenC">oenC</string>
 
 </resources>
 

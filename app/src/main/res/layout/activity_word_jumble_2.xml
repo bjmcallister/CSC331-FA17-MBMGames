@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ladder"
+    tools:context="com.example.spencermassey.test.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display"
+        android:text="A person who has authority over others"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/hint1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display1"
+        android:text="The rendered fat of hogs"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:id="@+id/hint2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display2"
+        android:text="Large body of mass"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <TextView
+        android:id="@+id/hint3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display3"
+        android:text="A narrow road"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <TextView
+        android:id="@+id/hint4"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display4"
+        android:text="Hollow, jointed stem of a tall grass. Some times used for walking"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="800dp" />
+
+    <TextView
+        android:id="@+id/hint5"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display"
+        android:text="Single distinct meaningful element of speech"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <TextView
+        android:id="@+id/hint6"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:onClick="display"
+        android:text="A solid object that tapers from a circular circular base to a point."
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="943dp" />
+
+    <EditText
+        android:id="@+id/start"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:inputType="textPersonName"
+        android:text="@string/rodW"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="106dp" />
+
+    <EditText
+        android:id="@+id/Answer"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer1"
+        android:selectAllOnFocus="true"
+        android:text="lord"
+        android:textSize="30sp"
+        android:textColor="#0F0"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <EditText
+        android:id="@+id/Answer1"
+        android:layout_width="149dp"
+        android:textColor="#0F0"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer2"
+        android:selectAllOnFocus="true"
+        android:text="lard"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+
+    <EditText
+        android:id="@+id/Answer2"
+        android:layout_width="149dp"
+        android:textColor="#0F0"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer3"
+        android:selectAllOnFocus="true"
+        android:text="land"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <EditText
+        android:id="@+id/Answer3"
+        android:layout_width="149dp"
+        android:textColor="#0F0"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer4"
+        android:selectAllOnFocus="true"
+        android:text="lane"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="720dp" />
+
+
+    <EditText
+        android:id="@+id/Answer4"
+        android:textColor="#0F0"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer"
+        android:selectAllOnFocus="true"
+        android:text="cane"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="868dp" />
+
+    <EditText
+        android:id="@+id/end"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/oenC"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="943dp" />
+
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check"
+        tools:layout_editor_absoluteX="676dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="exit"
+        android:text="@string/exit"
+        tools:layout_editor_absoluteX="676dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Reset"
+        android:text="@string/reset"
+        tools:layout_editor_absoluteX="676dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <EditText
+        android:id="@+id/Jumble"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:inputType="textPersonName"
+        android:text="@string/Ldor"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <EditText
+        android:id="@+id/Jumble4"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/eaCn"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="800dp" />
+
+    <EditText
+        android:id="@+id/Jumble3"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/eLna"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <EditText
+        android:id="@+id/Jumble2"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/nLad"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <EditText
+        android:id="@+id/Jumble5"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="@string/arLd"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <EditText
+        android:id="@+id/Answer5"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="cone"
+        android:inputType="textPersonName"
+        android:textColor="#0F0"
+        android:nextFocusDown="@+id/Answer"
+        android:selectAllOnFocus="true"
+        android:text="cone"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="1003dp" />
+
+    <EditText
+        android:id="@+id/Answer6"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:textColor="#0F0"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer"
+        android:inputType="textPersonName"
+        android:nextFocusDown="@+id/Answer"
+        android:selectAllOnFocus="true"
+        android:text="word"
+        android:textColor="#0F0"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+
+</android.support.constraint.ConstraintLayout>
+
