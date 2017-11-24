@@ -114,7 +114,6 @@
         android:nextFocusDown="@+id/Answer"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="163dp" />
@@ -131,7 +130,6 @@
         android:nextFocusDown="@+id/Answer3"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="284dp" />
@@ -148,7 +146,6 @@
         android:nextFocusDown="@+id/Answer2"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="425dp" />
@@ -166,7 +163,6 @@
         android:nextFocusDown="@+id/Answer3"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="568dp" />
@@ -183,7 +179,6 @@
         android:nextFocusDown="@+id/Answer4"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="720dp" />
@@ -201,7 +196,6 @@
         android:nextFocusDown="@+id/Answer"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="874dp" />
@@ -218,7 +212,6 @@
         android:nextFocusDown="@+id/Answer"
         android:selectAllOnFocus="true"
         android:text="@string/answer"
-        android:textColor="#0F0"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="1003dp" />
