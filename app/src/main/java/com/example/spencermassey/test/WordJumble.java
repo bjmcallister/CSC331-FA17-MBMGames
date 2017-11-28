@@ -41,6 +41,8 @@ package com.example.spencermassey.test;
 
 public class WordJumble extends AppCompatActivity {
 
+    Random rand = new Random();
+    int num = rand.nextInt(22);
     //initializes count
     public int count = 0;
 
@@ -226,75 +228,98 @@ public class WordJumble extends AppCompatActivity {
 
         //Adds an alert message if all answers are correct or not.
         Button mShowDialog = (Button) findViewById(R.id.check);
-        mShowDialog.setOnClickListener(new View.OnClickListener() {
+        mShowDialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
                 {
+                    count = 0;
+                    userInput.clearFocus();
+                    userInput1.clearFocus();
+                    userInput2.clearFocus();
+                    userInput3.clearFocus();
+                    userInput4.clearFocus();
+                    userInput5.clearFocus();
+                    userInput6.clearFocus();
 
-                        if ((userInput.getText().toString().toLowerCase().equals("word"))) {
-                            userInput.setTextColor(Color.GREEN);
-                            userInput.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput.setTextColor(Color.RED);
-                        }
+                    Cursor AllWords = db.getAllWords();
 
+                    AllWords.moveToPosition(num*7+0);
+                    String word1 = AllWords.getString(1);
 
-                        if ((userInput1.getText().toString().toLowerCase().equals("lord"))) {
-                            userInput1.setTextColor(Color.GREEN);
-                            userInput1.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput1.setTextColor(Color.RED);
-                        }
+//I dunno why, but when you get all answers right on the first time it crashes...
 
-
-
-                        if ((userInput2.getText().toString().toLowerCase().equals("lard"))) {
-                            userInput2.setTextColor(Color.GREEN);
-                            userInput2.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput2.setTextColor(Color.RED);
-                        }
+                    if ((userInput.getText().toString().toLowerCase().equals(word1))) {
+                        userInput.setTextColor(Color.GREEN);
+                        userInput.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput.setTextColor(Color.RED);
+                    }
 
 
-                        if ((userInput3.getText().toString().toLowerCase().equals("land"))) {
-                            userInput3.setTextColor(Color.GREEN);
-                            userInput3.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput3.setTextColor(Color.RED);
-                        }
+                    AllWords.moveToNext();
+                    String word2 = AllWords.getString(1);
+                    if ((userInput1.getText().toString().toLowerCase().equals(word2))) {
+                        userInput1.setTextColor(Color.GREEN);
+                        userInput1.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput1.setTextColor(Color.RED);
+                    }
 
 
-                        if ((userInput4.getText().toString().toLowerCase().equals("lane"))) {
-                            userInput4.setTextColor(Color.GREEN);
-                            userInput4.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput4.setTextColor(Color.RED);
-                        }
+                    AllWords.moveToNext();
+                    String word3 = AllWords.getString(1);
+                    if ((userInput2.getText().toString().toLowerCase().equals(word3))) {
+                        userInput2.setTextColor(Color.GREEN);
+                        userInput2.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput2.setTextColor(Color.RED);
+                    }
 
 
-                        if ((userInput5.getText().toString().toLowerCase().equals("cane"))) {
-                            userInput5.setTextColor(Color.GREEN);
-                            userInput5.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput5.setTextColor(Color.RED);
-                        }
+                    AllWords.moveToNext();
+                    String word4 = AllWords.getString(1);
+                    if ((userInput3.getText().toString().toLowerCase().equals(word4))) {
+                        userInput3.setTextColor(Color.GREEN);
+                        userInput3.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput3.setTextColor(Color.RED);
+                    }
 
 
-                        if ((userInput6.getText().toString().toLowerCase().equals("cone"))) {
-                            userInput6.setTextColor(Color.GREEN);
-                            userInput6.setFocusable(false);
-                            count++;
-                        } else {
-                            userInput6.setTextColor(Color.RED);
-                        }
+                    AllWords.moveToNext();
+                    String word5 = AllWords.getString(1);
+                    if ((userInput4.getText().toString().toLowerCase().equals(word5))) {
+                        userInput4.setTextColor(Color.GREEN);
+                        userInput4.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput4.setTextColor(Color.RED);
+                    }
 
+                    AllWords.moveToNext();
+                    String word6 = AllWords.getString(1);
+                    if ((userInput5.getText().toString().toLowerCase().equals(word6))) {
+                        userInput5.setTextColor(Color.GREEN);
+                        userInput5.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput5.setTextColor(Color.RED);
+                    }
+
+                    AllWords.moveToNext();
+                    String word7 = AllWords.getString(1);
+                    if ((userInput6.getText().toString().toLowerCase().equals(word7))) {
+                        userInput6.setTextColor(Color.GREEN);
+                        userInput6.setFocusable(false);
+                        count++;
+                    } else {
+                        userInput6.setTextColor(Color.RED);
+                    }
 
                     if (count >= 7) {
                         AlertDialog.Builder mBuilder = new AlertDialog.Builder(WordJumble.this);
@@ -477,30 +502,46 @@ public class WordJumble extends AppCompatActivity {
                 return true;
             }
         });
+
+        AllWords.moveToPosition(num*7);
+        String word1 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+1);
+        String word2 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+2);
+        String word3 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+3);
+        String word4 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+4);
+        String word5 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+5);
+        String word6 = AllWords.getString(1);
+        AllWords.moveToPosition(num*7+6);
+        String word7 = AllWords.getString(1);
+        EditText Start=(EditText) findViewById(R.id.Word1);
+        Start.setText(word1);
+        EditText two=(EditText) findViewById(R.id.Word2);
+        two.setText(word2);
+        EditText three=(EditText) findViewById(R.id.Word3);
+        three.setText(word3);
+        EditText four=(EditText) findViewById(R.id.Word4);
+        four.setText(word4);
+        EditText five=(EditText) findViewById(R.id.Word5);
+        five.setText(word5);
+        EditText six=(EditText) findViewById(R.id.Word6);
+        six.setText(word6);
+        EditText End=(EditText) findViewById(R.id.Word7);
+        End.setText(word7);
     }
 
     //Recreates the board
-    public void Restart() {
-        this.recreate();
-    }
+    //public void Restart() {
+        //this.recreate();
+    //}
 
     //Resets all answers
     public void Reset(View v) {
-        EditText Answer1 = (EditText) findViewById(R.id.Answer1);
-        Answer1.setText("");
-        EditText Answer2 = (EditText) findViewById(R.id.Answer2);
-        Answer2.setText("");
-        EditText Answer3 = (EditText) findViewById(R.id.Answer3);
-        Answer3.setText("");
-        EditText Answer4 = (EditText) findViewById(R.id.Answer4);
-        Answer4.setText("");
-        EditText Answer5 = (EditText) findViewById(R.id.Answer5);
-        Answer5.setText("");
-        EditText Answer6 = (EditText) findViewById(R.id.Answer6);
-        Answer6.setText("");
-        EditText Answer7 = (EditText) findViewById(R.id.Answer7);
-        Answer7.setText("");
-        Restart();
+        Intent nextPage = new Intent(WordJumble.this, WordJumble.class);
+        startActivity(nextPage);
     }
 
     //switches to Main Menu
@@ -510,45 +551,74 @@ public class WordJumble extends AppCompatActivity {
     }
 
 
+    //hint1
+    public void hint1(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7);
+        String Phrase1 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint1);
+        tv.setText(Phrase1);
+    }
     //hint2
-    public void hint1(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint1);
-        tv.setText(R.string.h1);
+    public void hint2(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+1);
+        String Phrase2 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint2);
+        tv.setText(Phrase2);
     }
-
-    public void hint2(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint2);
-        tv.setText(R.string.h2);
-
-    }
-
     //hint3
-    public void hint3(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint3);
-        tv.setText(R.string.h3);
+    public void hint3(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+2);
+        String Phrase3 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint3);
+        tv.setText(Phrase3);
     }
-
     //hint4
-    public void hint4(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint4);
-        tv.setText(R.string.h4);
+    public void hint4(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+3);
+        String Phrase6 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint4);
+        tv.setText(Phrase6);
     }
-
     //hint5
-    public void hint5(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint5);
-        tv.setText(R.string.h5);
+    public void hint5(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+4);
+        String Phrase5 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint5);
+        tv.setText(Phrase5);
     }
 
-    public void hint6(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint6);
-        tv.setText(R.string.h6);
-
+    public void hint6(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+5);
+        String Phrase5 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint6);
+        tv.setText(Phrase5);
     }
 
-    public void hint7(View v) {
-        TextView tv = (TextView) findViewById(R.id.hint7);
-        tv.setText(R.string.h7);
-
+    public void hint7(View v)
+    {
+        final DBHelper db = new DBHelper(this);
+        Cursor AllWords = db.getAllWords();
+        AllWords.moveToPosition(num*7+6);
+        String Phrase5 = AllWords.getString(2);
+        TextView tv= (TextView) findViewById(R.id.hint7);
+        tv.setText(Phrase5);
     }
 }
