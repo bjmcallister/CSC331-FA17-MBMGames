@@ -1,20 +1,20 @@
 package com.example.spencermassey.test;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.IBinder;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+        import android.content.Context;
+        import android.content.DialogInterface;
+        import android.content.Intent;
+        import android.graphics.Color;
+        import android.os.IBinder;
+        import android.support.v7.app.AlertDialog;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.KeyEvent;
+        import android.view.View;
+        import android.view.inputmethod.EditorInfo;
+        import android.view.inputmethod.InputMethodManager;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.TextView;
 
 public class WordJumble extends AppCompatActivity {
 
@@ -48,70 +48,70 @@ public class WordJumble extends AppCompatActivity {
             public void onClick(View view) {
 
                 {
-                    {
-                        if ((userInput.getText().toString().equals("word"))) {
+
+                        if ((userInput.getText().toString().toLowerCase().equals("word"))) {
                             userInput.setTextColor(Color.GREEN);
                             userInput.setFocusable(false);
                             count++;
                         } else {
                             userInput.setTextColor(Color.RED);
                         }
-                    }
-                    {
-                        if ((userInput1.getText().toString().equals("lord"))) {
+
+
+                        if ((userInput1.getText().toString().toLowerCase().equals("lord"))) {
                             userInput1.setTextColor(Color.GREEN);
                             userInput1.setFocusable(false);
                             count++;
                         } else {
                             userInput1.setTextColor(Color.RED);
                         }
-                    }
 
-                    {
-                        if ((userInput2.getText().toString().equals("lard"))) {
+
+
+                        if ((userInput2.getText().toString().toLowerCase().equals("lard"))) {
                             userInput2.setTextColor(Color.GREEN);
                             userInput2.setFocusable(false);
                             count++;
                         } else {
                             userInput2.setTextColor(Color.RED);
                         }
-                    }
-                    {
-                        if ((userInput3.getText().toString().equals("land"))) {
+
+
+                        if ((userInput3.getText().toString().toLowerCase().equals("land"))) {
                             userInput3.setTextColor(Color.GREEN);
                             userInput3.setFocusable(false);
                             count++;
                         } else {
                             userInput3.setTextColor(Color.RED);
                         }
-                    }
-                    {
-                        if ((userInput4.getText().toString().equals("lane"))) {
+
+
+                        if ((userInput4.getText().toString().toLowerCase().equals("lane"))) {
                             userInput4.setTextColor(Color.GREEN);
                             userInput4.setFocusable(false);
                             count++;
                         } else {
                             userInput4.setTextColor(Color.RED);
                         }
-                    }
-                    {
-                        if ((userInput5.getText().toString().equals("cane"))) {
+
+
+                        if ((userInput5.getText().toString().toLowerCase().equals("cane"))) {
                             userInput5.setTextColor(Color.GREEN);
                             userInput5.setFocusable(false);
                             count++;
                         } else {
                             userInput5.setTextColor(Color.RED);
                         }
-                    }
-                    {
-                        if ((userInput6.getText().toString().equals("cone"))) {
+
+
+                        if ((userInput6.getText().toString().toLowerCase().equals("cone"))) {
                             userInput6.setTextColor(Color.GREEN);
                             userInput6.setFocusable(false);
                             count++;
                         } else {
                             userInput6.setTextColor(Color.RED);
                         }
-                    }
+
 
                     if (count >= 7) {
                         AlertDialog.Builder mBuilder = new AlertDialog.Builder(WordJumble.this);
@@ -194,7 +194,7 @@ public class WordJumble extends AppCompatActivity {
             @Override
             public void onFocusChange(View arg0, boolean hasfocus) {
                 if (hasfocus) {
-                    userInput4.setTextColor(Color.WHITE);
+                    userInput5.setTextColor(Color.WHITE);
                 }
             }
         });
@@ -202,7 +202,7 @@ public class WordJumble extends AppCompatActivity {
             @Override
             public void onFocusChange(View arg0, boolean hasfocus) {
                 if (hasfocus) {
-                    userInput4.setTextColor(Color.WHITE);
+                    userInput6.setTextColor(Color.WHITE);
                 }
             }
         });
@@ -211,7 +211,7 @@ public class WordJumble extends AppCompatActivity {
         //If sets an Action_Done command to turn the correct answer to green and add to count
         userInput.setSingleLine(true);
         userInput.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        /*userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -281,7 +281,7 @@ public class WordJumble extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(bob, 0);
                 return true;
             }
-        });
+        });*/
         userInput6.setSingleLine(true);
         userInput6.setImeOptions(EditorInfo.IME_ACTION_DONE);
         userInput6.setOnEditorActionListener(new TextView.OnEditorActionListener() {

@@ -48,7 +48,7 @@ public class WordLadder extends AppCompatActivity {
 
                 {
                     {
-                        if ((userInput.getText().toString().equals("lord"))) {
+                        if ((userInput.getText().toString().toLowerCase().equals("lord"))) {
                             userInput.setTextColor(Color.GREEN);
                             userInput.setFocusable(false);
                             count++;
@@ -57,7 +57,7 @@ public class WordLadder extends AppCompatActivity {
                         }
                     }
                     {
-                        if ((userInput1.getText().toString().equals("lard"))) {
+                        if ((userInput1.getText().toString().toLowerCase().equals("lard"))) {
                             userInput1.setTextColor(Color.GREEN);
                             userInput1.setFocusable(false);
                             count++;
@@ -67,7 +67,7 @@ public class WordLadder extends AppCompatActivity {
                     }
 
                     {
-                        if ((userInput2.getText().toString().equals("land"))) {
+                        if ((userInput2.getText().toString().toLowerCase().equals("land"))) {
                             userInput2.setTextColor(Color.GREEN);
                             userInput2.setFocusable(false);
                             count++;
@@ -76,7 +76,7 @@ public class WordLadder extends AppCompatActivity {
                         }
                     }
                     {
-                        if ((userInput3.getText().toString().equals("lane"))) {
+                        if ((userInput3.getText().toString().toLowerCase().equals("lane"))) {
                             userInput3.setTextColor(Color.GREEN);
                             userInput3.setFocusable(false);
                             count++;
@@ -85,7 +85,7 @@ public class WordLadder extends AppCompatActivity {
                         }
                     }
                     {
-                        if ((userInput4.getText().toString().equals("cane"))) {
+                        if ((userInput4.getText().toString().toLowerCase().equals("cane"))) {
                             userInput4.setTextColor(Color.GREEN);
                             userInput4.setFocusable(false);
                             count++;
@@ -177,7 +177,7 @@ public class WordLadder extends AppCompatActivity {
         //If sets an Action_Done command to turn the correct answer to green and add to count
         userInput.setSingleLine(true);
         userInput.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        /*userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -223,7 +223,7 @@ public class WordLadder extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(bob, 0);
                 return true;
             }
-        });
+        });*/
         userInput4.setSingleLine(true);
         userInput4.setImeOptions(EditorInfo.IME_ACTION_DONE);
         userInput4.setOnEditorActionListener(new TextView.OnEditorActionListener() {
