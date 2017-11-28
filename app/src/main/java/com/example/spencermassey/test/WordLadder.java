@@ -235,7 +235,13 @@ public class WordLadder extends AppCompatActivity {
                     AllWords.moveToPosition(num*7+1);
                     String word1 = AllWords.getString(1);
 
-                        if ((userInput.getText().toString().equals(word1))) {
+                    userInput.clearFocus();
+                    userInput1.clearFocus();
+                    userInput2.clearFocus();
+                    userInput3.clearFocus();
+                    userInput4.clearFocus();
+
+                        if ((userInput.getText().toString().toLowerCase().equals(word1))) {
                             userInput.setTextColor(Color.GREEN);
                             userInput.setFocusable(false);
                             count++;
@@ -246,7 +252,7 @@ public class WordLadder extends AppCompatActivity {
 
                         AllWords.moveToNext();
                         String word2 = AllWords.getString(1);
-                        if ((userInput1.getText().toString().equals(word2))) {
+                        if ((userInput1.getText().toString().toLowerCase().equals(word2))) {
                             userInput1.setTextColor(Color.GREEN);
                             userInput1.setFocusable(false);
                             count++;
@@ -257,7 +263,7 @@ public class WordLadder extends AppCompatActivity {
 
                     AllWords.moveToNext();
                         String word3 = AllWords.getString(1);
-                        if ((userInput2.getText().toString().equals(word3))) {
+                        if ((userInput2.getText().toString().toLowerCase().equals(word3))) {
                             userInput2.setTextColor(Color.GREEN);
                             userInput2.setFocusable(false);
                             count++;
@@ -268,7 +274,7 @@ public class WordLadder extends AppCompatActivity {
 
                         AllWords.moveToNext();
                         String word4 = AllWords.getString(1);
-                        if ((userInput3.getText().toString().equals(word4))) {
+                        if ((userInput3.getText().toString().toLowerCase().equals(word4))) {
                             userInput3.setTextColor(Color.GREEN);
                             userInput3.setFocusable(false);
                             count++;
@@ -279,7 +285,7 @@ public class WordLadder extends AppCompatActivity {
 
                         AllWords.moveToNext();
                         String word5 = AllWords.getString(1);
-                        if ((userInput4.getText().toString().equals(word5))) {
+                        if ((userInput4.getText().toString().toLowerCase().equals(word5))) {
                             userInput4.setTextColor(Color.GREEN);
                             userInput4.setFocusable(false);
                             count++;
@@ -446,30 +452,14 @@ public class WordLadder extends AppCompatActivity {
     }
 
     //Recreates the board
-    public void Restart(){
-        this.recreate();
-    }
+    //public void Restart(){
+        //this.recreate();
+    //}
 
     //Resets all answers
     public void Reset(View v){
-        final DBHelper db = new DBHelper(this);
-        Cursor AllWords = db.getAllWords();
-        EditText Answer=(EditText) findViewById(R.id.Answer);
-        Answer.setText("");
-        EditText Answer1=(EditText) findViewById(R.id.Answer1);
-        Answer1.setText("");
-        EditText Answer2=(EditText) findViewById(R.id.Answer2);
-        Answer2.setText("");
-        EditText Answer3=(EditText) findViewById(R.id.Answer3);
-        Answer3.setText("");
-        EditText Answer4=(EditText) findViewById(R.id.Answer4);
-        Answer4.setText("");
-
-        EditText Start=(EditText) findViewById(R.id.start);
-        EditText End=(EditText) findViewById(R.id.end);
-        Restart();
-
-
+        Intent nextPage = new Intent(WordLadder.this, WordLadder.class);
+        startActivity(nextPage);
     }
 
     //switches to Main Menu
