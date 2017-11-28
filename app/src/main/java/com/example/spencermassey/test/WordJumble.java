@@ -36,10 +36,24 @@ package com.example.spencermassey.test;
         import android.widget.EditText;
         import android.widget.TextView;
 
+        import java.util.Arrays;
+        import java.util.Collections;
         import java.util.List;
         import java.util.Random;
 
 public class WordJumble extends AppCompatActivity {
+
+    public static String getScrambled(String s) {
+        String[] scram = s.split("");
+        List<String> letters = Arrays.asList(scram);
+        Collections.shuffle(letters);
+        StringBuilder sb = new StringBuilder(s.length());
+        for (String c : letters) {
+            sb.append(c);
+        }
+        return sb.toString();
+    }
+
 
     Random rand = new Random();
     int num = rand.nextInt(22);
@@ -233,21 +247,20 @@ public class WordJumble extends AppCompatActivity {
             public void onClick(View view) {
 
                 {
-                    count = 0;
-                    userInput.clearFocus();
+                    //count = 0;
+                    /*userInput.clearFocus();
                     userInput1.clearFocus();
                     userInput2.clearFocus();
                     userInput3.clearFocus();
                     userInput4.clearFocus();
                     userInput5.clearFocus();
-                    userInput6.clearFocus();
+                    userInput6.clearFocus();*/
 
                     Cursor AllWords = db.getAllWords();
 
                     AllWords.moveToPosition(num*7+0);
                     String word1 = AllWords.getString(1);
 
-//I dunno why, but when you get all answers right on the first time it crashes...
 
                     if ((userInput.getText().toString().toLowerCase().equals(word1))) {
                         userInput.setTextColor(Color.GREEN);
@@ -518,19 +531,19 @@ public class WordJumble extends AppCompatActivity {
         AllWords.moveToPosition(num*7+6);
         String word7 = AllWords.getString(1);
         EditText Start=(EditText) findViewById(R.id.Word1);
-        Start.setText(word1);
+        Start.setText(getScrambled(word1));
         EditText two=(EditText) findViewById(R.id.Word2);
-        two.setText(word2);
+        two.setText(getScrambled(word2));
         EditText three=(EditText) findViewById(R.id.Word3);
-        three.setText(word3);
+        three.setText(getScrambled(word3));
         EditText four=(EditText) findViewById(R.id.Word4);
-        four.setText(word4);
+        four.setText(getScrambled(word4));
         EditText five=(EditText) findViewById(R.id.Word5);
-        five.setText(word5);
+        five.setText(getScrambled(word5));
         EditText six=(EditText) findViewById(R.id.Word6);
-        six.setText(word6);
+        six.setText(getScrambled(word6));
         EditText End=(EditText) findViewById(R.id.Word7);
-        End.setText(word7);
+        End.setText(getScrambled(word7));
     }
 
     //Recreates the board

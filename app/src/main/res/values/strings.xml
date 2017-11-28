@@ -8,7 +8,7 @@
     <string name="button_word_jumble">Word Jumble</string>
     <string name="end">Cone</string>
     <string name="start">Word</string>
-    <string name="hint">"?"</string>
+    <string name="hint">"--?--"</string>
     <string name="answer">_____</string>
     <string name="button_word_ladder">World Ladder</string>
     <string name="title_activity_second_page">Word Jumble</string>

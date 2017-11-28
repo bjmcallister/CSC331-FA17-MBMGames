@@ -235,11 +235,11 @@ public class WordLadder extends AppCompatActivity {
                     AllWords.moveToPosition(num*7+1);
                     String word1 = AllWords.getString(1);
 
-                    userInput.clearFocus();
+                    /*userInput.clearFocus();
                     userInput1.clearFocus();
                     userInput2.clearFocus();
                     userInput3.clearFocus();
-                    userInput4.clearFocus();
+                    userInput4.clearFocus();*/
 
                         if ((userInput.getText().toString().toLowerCase().equals(word1))) {
                             userInput.setTextColor(Color.GREEN);
