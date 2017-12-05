@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSC331-FA17-MBMGames.iml" filepath="$PROJECT_DIR$/CSC331-FA17-MBMGames.iml" />
+      <module fileurl="file://C:\Users\Kimberly\AndroidStudioProjects\CSC331-FA17-MBMGames\CSC331-FA17-MBMGames.iml" filepath="C:\Users\Kimberly\AndroidStudioProjects\CSC331-FA17-MBMGames\CSC331-FA17-MBMGames.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

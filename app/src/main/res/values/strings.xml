@@ -1,5 +1,49 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="Jumble">Word Jumble</string>
+    <string name="Ladder">Word Ladder</string>
+    <string name="action_settings">Settings</string>
+    <string name="Return">Return</string>
     <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="button_word_jumble">Word Jumble</string>
+    <string name="end">Cone</string>
+    <string name="start">Word</string>
+    <string name="hint">"--?--"</string>
+    <string name="answer">_____</string>
+    <string name="button_word_ladder">World Ladder</string>
+    <string name="title_activity_second_page">Word Jumble</string>
+    <string name="title_activity_word_ladder">Word Ladder</string>
+    <string name="check">Check</string>
+    <string name="congrats">Congrats</string>
+    <string name="cont">Congrats! Would you like to continue or exit?</string>
+    <string name="incorrect">One of your answers is incorrect</string>
+    <string name="blank">____</string>
+    <string name="exit">exit</string>
+    <string name="reset">Reset</string>
+    <string name="incor">I\'m sorry, but at least one of your answers is incorrect.</string>
+    <string name="Con">Congrats!</string>
+    <string name="winner">Congratulations! You have solved this Word Ladder!</string>
+    <string name="wrong">Incorrect!</string>
+    <string name="mbm_games">MBM Games</string>
+    <string name="hint4">A stick or short staff used to assist one in walking</string>
+    <string name="hint3">Part of a highway large enough for one vehicle</string>
+    <string name="hint2">Any part of the earth\'s surface not covered by water</string>
+    <string name="hint1">The rendered fat of hogs</string>
+    <string name="hints">A person who has authority over others</string>
+    <string name="rodW">rodW</string>
+    <string name="Ldor">Ldor</string>
+    <string name="arLd">arLd</string>
+    <string name="nLad">nLad</string>
+    <string name="eLna">eLna</string>
+    <string name="eaCn">eaCn</string>
+    <string name="oenC">oenC</string>
+    <string name="h1">Single distinct meaningful element of speech</string>
+    <string name="h2">A person who has authority over others</string>
+    <string name="h3">The rendered fat of hogs</string>
+    <string name="h4">Large body of mass</string>
+    <string name="h5">A narrow road</string>
+    <string name="h6">Hollow, jointed stem of a tall grass. Some times used for walking</string>
+    <string name="h7">A solid object that tapers from a circular circular base to a point.</string>
+
 </resources>
+
